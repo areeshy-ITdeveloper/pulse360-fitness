@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0b0d10;
+}
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* ==================== 1. NAVBAR ==================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4%;
+  background: rgba(11, 13, 16, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  
+  /* Fixed position set karne ke liye: */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure sab components ke upar ho */
+  border-bottom: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+/* Page content ko navbar ke piche chupne se bachane ke liye spacing */
+.main-content {
+  padding-top: 80px; /* Modern navbar height adjustment */
+  min-height: calc(100vh - 80px);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-icon {
+  background: var(--accent-green);
+  color: #000;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-white); /* PULSE ka color white rahega */
+}
+
+/* 360 ke liye neon green accent color */
+.brand-accent {
+  color: var(--accent-green);
+}
+
+.brand-sub {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-top: -3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.nav-links li.active a,
+.nav-links a:hover {
+  color: var(--text-white);
+  border-bottom: 2px solid var(--accent-green);
+  padding-bottom: 4px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-join {
+  background: var(--accent-green);
+  color: #000;
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.3);
+}
+
+/* ==================== FOOTER SECTION ==================== */
+.footer-container {
+  background: #090b0e;
+  border-top: 1px solid #1a1e26;
+  padding: 4.5rem 5% 2.5rem;
+  color: #ffffff;
+  font-family: inherit;
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* Stretch to absolute full screen width */
+  margin-right: -50vw;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.footer-content-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1.8fr 2fr;
+  gap: 3rem;
+  max-width: 1300px;
+  margin: 0 auto 4rem;
+  align-items: start;
+}
+
+/* Col 1: Brand Column */
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Brand Logo Colors */
+.logo-white {
+  color: #ffffff;
+}
+
+.logo-accent {
+  color: #ccff00; /* Neon green accent color */
+}
+
+.footer-logo {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.footer-badge {
+  background: rgba(204, 255, 0, 0.1);
+  color: #ccff00;
+  border: 1px solid rgba(204, 255, 0, 0.25);
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.footer-brand-desc {
+  color: #8a909e;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 340px;
+}
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #d1d5db;
+}
+
+.location-dot {
+  width: 7px;
+  height: 7px;
+  background: #ccff00;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ccff00;
+}
+
+/* Common Column Headers */
+.footer-col-title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* Col 2: Navigation Links */
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav-list a {
+  color: #8a909e;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-list a:hover {
+  color: #ccff00;
+}
+
+/* Col 3: Protocol Card */
+.protocol-card {
+  background: #11141c;
+  border: 1px solid #1c202a;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.protocol-card-title {
+  color: #ccff00;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.protocol-card-desc {
+  color: #8a909e;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Col 4: Telemetry Dispatch Form */
+.dispatch-desc {
+  color: #8a909e;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.dispatch-form {
+  display: flex;
+  gap: 0;
+  background: #11141c;
+  border: 1px solid #1c202a;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dispatch-input {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  width: 100%;
+  outline: none;
+}
+
+.dispatch-input::placeholder {
+  color: #525866;
+}
+
+.dispatch-btn {
+  background: #ccff00;
+  color: #0b0d10;
+  border: none;
+  padding: 0 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dispatch-btn:hover {
+  background: #b5e600;
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid #14171f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: #8a909e;
+}
+
+.copyright-text {
+  font-weight: 600;
+  margin: 0;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.footer-legal-links a {
+  color: #8a909e;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,1212 @@
+/* ==================== ABOUT HERO SECTION ==================== */
+.about-hero-section {
+  position: relative;
+  background-color: #0b0d10;
+  color: #ffffff;
+  padding: 4rem 1.5rem 5rem 1.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background Video Styling */
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark Overlay for contrast and readability */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg, 
+    rgba(11, 13, 16, 0.75) 0%, 
+    rgba(11, 13, 16, 0.88) 60%, 
+    #0b0d10 100%
+  );
+  z-index: 2;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Tag Header */
+.about-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(204, 255, 0, 0.08);
+  border: 1px solid rgba(204, 255, 0, 0.2);
+  color: #ccff00;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ccff00;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ccff00;
+}
+
+/* Hero Grid Layout */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 3rem;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+.about-hero-title {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.about-hero-title .accent-text {
+  color: #ccff00;
+}
+
+/* Right Description Column */
+.about-hero-desc-box {
+  padding-bottom: 0.5rem;
+}
+
+.system-directive {
+  color: #ccff00;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.about-hero-desc {
+  color: #b3b9c4;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Stats Cards Grid */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.about-stat-card {
+  background: rgba(17, 20, 28, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid #1c212d;
+  border-radius: 8px;
+  padding: 1.8rem 1.4rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-stat-card:hover {
+  border-color: rgba(204, 255, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stat-label {
+  color: #8a909e;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.stat-icon-wrapper {
+  color: #ccff00;
+  display: flex;
+  align-items: center;
+}
+
+.stat-value {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #ccff00;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-subtext {
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.8rem;
+}
+
+.stat-desc {
+  color: #8a909e;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-hero-title {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==================== ARCHITECTURAL PILLARS SECTION ==================== */
+.pillars-section {
+  background-color: #0b0d10;
+  color: #ffffff;
+  padding: 5rem 1.5rem 6rem 1.5rem;
+  width: 100%;
+}
+
+.pillars-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.pillars-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+}
+
+.pillars-subtag {
+  color: #ccff00;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.pillars-main-title {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1;
+  margin: 0;
+}
+
+.pillars-header-desc {
+  color: #8a909e;
+  font-size: 0.9rem;
+  max-width: 380px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Grid Layout */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* Pillar Card Base */
+.pillar-card {
+  background-color: #12151e;
+  border-radius: 8px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #1a1f2c;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.pillar-card:hover {
+  border-color: rgba(204, 255, 0, 0.3);
+}
+
+/* Top Accent Line */
+.pillar-top-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ccff00;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+}
+
+/* Icon Box Styling */
+.pillar-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: #171c28;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pillar-icon-svg {
+  color: #ccff00;
+  filter: drop-shadow(0 0 5px rgba(204, 255, 0, 0.4));
+}
+
+/* Text Content */
+.pillar-number {
+  color: #6b7280;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.pillar-title {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.pillar-desc {
+  color: #9da4b0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
+/* Bottom Footer Action */
+.pillar-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.pillar-card:hover .pillar-footer {
+  opacity: 0.9;
+}
+
+.pillar-link-text {
+  color: #ccff00;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pillar-arrow-icon {
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.pillar-card:hover .pillar-arrow-icon {
+  transform: translateX(4px);
+  color: #ccff00;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pillars-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pillars-main-title {
+    font-size: 2.2rem;
+  }
+}
+/* ==================== MEET THE HEAD MASTERS SECTION ==================== */
+.masters-section {
+  background-color: #0b0d10;
+  color: #ffffff;
+  padding: 5rem 1.5rem;
+  width: 100%;
+}
+
+.masters-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.masters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+}
+
+.masters-subtag {
+  color: #ccff00;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.masters-main-title {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1;
+  margin: 0;
+}
+
+.masters-header-desc {
+  color: #8a909e;
+  font-size: 0.9rem;
+  max-width: 420px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Grid Layout */
+.masters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* Coach Card Base */
+.coach-card {
+  background-color: #12151e;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #1a1f2c;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease;
+}
+
+.coach-card:hover {
+  border-color: rgba(204, 255, 0, 0.3);
+}
+
+/* Image Container */
+.coach-image-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-color: #0d0f14;
+  overflow: hidden;
+}
+
+.coach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(110%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.coach-card:hover .coach-image {
+  transform: scale(1.04);
+  filter: grayscale(80%) contrast(115%);
+}
+
+.coach-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 21, 30, 0.1) 0%, #12151e 100%);
+}
+
+.coach-code-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(11, 13, 16, 0.85);
+  border: 1px solid rgba(204, 255, 0, 0.4);
+  color: #ccff00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+/* Body Styling */
+.coach-card-body {
+  padding: 1.5rem 1.8rem 1.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.coach-name {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.coach-role {
+  color: #ccff00;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 1.5rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Meta Blocks */
+.coach-meta-block {
+  margin-bottom: 1rem;
+}
+
+.meta-label {
+  color: #6b7280;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+
+.meta-text {
+  color: #d1d5db;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Quote */
+.coach-quote {
+  color: #9da4b0;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(204, 255, 0, 0.4);
+}
+
+/* Stat Box */
+.coach-stats-box {
+  background-color: #171c28;
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid #1f2638;
+}
+
+.coach-stat-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-meta-label {
+  color: #6b7280;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+}
+
+.stat-meta-value {
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.accent-stat {
+  color: #ccff00;
+}
+
+/* Button Styling */
+.coach-btn {
+  width: 100%;
+  background-color: #181d2a;
+  border: 1px solid #283044;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.coach-btn:hover {
+  background-color: #ccff00;
+  color: #000000;
+  border-color: #ccff00;
+}
+
+.coach-btn:hover .btn-icon {
+  color: #000000;
+}
+
+.btn-icon {
+  color: #9da4b0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .masters-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .masters-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .masters-main-title {
+    font-size: 2.2rem;
+  }
+}
+/* Modal Overlay Backdrop */
+.tour-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 10, 16, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Modal Surface Card */
+.tour-modal-card {
+  background-color: #0b1118;
+  border: 1px solid rgba(204, 255, 0, 0.25);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 540px;
+  padding: 28px 30px;
+  color: #ffffff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(204, 255, 0, 0.08);
+  position: relative;
+  font-family: inherit;
+}
+
+/* Top System Code & Close */
+.tour-modal-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sys-code {
+  font-family: monospace;
+  font-size: 10px;
+  color: #4a5568;
+  letter-spacing: 1px;
+}
+
+.tour-modal-close {
+  background: transparent;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.tour-modal-close:hover {
+  color: #ccff00;
+}
+
+/* Pill Badge */
+.tour-pill-badge {
+  display: inline-block;
+  background: rgba(204, 255, 0, 0.1);
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-bottom: 14px;
+}
+
+.tour-pill-badge span {
+  color: #ccff00;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: monospace;
+  letter-spacing: 1.2px;
+}
+
+/* Main Heading */
+.tour-modal-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.tour-modal-subtitle {
+  font-size: 12.5px;
+  color: #8a99ad;
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+
+/* VIP Pass Box */
+.vip-pass-card {
+  background: #05080e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.vip-pass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.vip-price-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-accent {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ccff00;
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+}
+
+.vip-badge-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.guaranteed-badge {
+  background: rgba(204, 255, 0, 0.15);
+  color: #ccff00;
+  font-size: 8px;
+  font-weight: 800;
+  padding: 4px 6px;
+  border-radius: 4px;
+  line-height: 1.2;
+  font-family: monospace;
+}
+
+.credit-text {
+  font-size: 10px;
+  color: #718096;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.vip-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vip-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  color: #e2e8f0;
+}
+
+.check-icon-box {
+  background: #ccff00;
+  color: #000;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.vip-feature-item strong {
+  color: #ccff00;
+}
+
+/* Form Styling */
+.tour-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tour-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-form-group label {
+  font-size: 9.5px;
+  font-weight: 700;
+  font-family: monospace;
+  color: #a0aec0;
+  letter-spacing: 1px;
+}
+
+.required-tag {
+  font-size: 9px;
+  font-family: monospace;
+  color: #ccff00;
+}
+
+.tour-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tour-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tour-input-wrapper input,
+.tour-input-wrapper select {
+  width: 100%;
+  background: #05080e;
+  border: 1px solid #1a2332;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #ffffff;
+  font-size: 12.5px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.tour-input-wrapper input:focus,
+.tour-input-wrapper select:focus {
+  border-color: #ccff00;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.2);
+}
+
+.tour-input-icon {
+  position: absolute;
+  right: 12px;
+  color: #4a5568;
+  pointer-events: none;
+}
+
+/* Custom Calendar Icon Color for date input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Neon Submit Button */
+.tour-submit-btn {
+  background: #ccff00;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.25);
+}
+
+.tour-submit-btn:hover {
+  background: #d8ff33;
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+.tour-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer Telemetry Text */
+.tour-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9.5px;
+  font-family: monospace;
+  color: #718096;
+  margin-top: 16px;
+}
+
+.tour-modal-footer span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tour-modal-footer .highlight-text {
+  color: #ccff00;
+}
+
+/* Alerts */
+.form-alert {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #10b981;
+}
+
+.alert-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+/* Responsive adjust for mobile */
+@media (max-width: 580px) {
+  .tour-form-row {
+    grid-template-columns: 1fr;
+  }
+  .tour-modal-card {
+    padding: 20px 18px;
+  }
+  .vip-pass-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tour-modal-footer {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+}
+/* ==================== INSTITUTIONAL ACCREDITATIONS SECTION ==================== */
+.accred-section {
+  background-color: #0b0d10;
+  color: #ffffff;
+  padding: 4.5rem 1.5rem;
+  width: 100%;
+}
+
+.accred-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.accred-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.accred-subtag {
+  color: #ccff00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.accred-main-title {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+}
+
+.accred-header-badge {
+  color: #8a909e;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Grid Layout */
+.accred-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Accred Cards */
+.accred-card {
+  background-color: #12151e;
+  border-radius: 6px;
+  padding: 2.2rem 1.5rem;
+  border: 1px solid #1a1f2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.accred-card:hover {
+  border-color: rgba(204, 255, 0, 0.3);
+}
+
+.accred-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  background-color: #171c28;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.accred-icon {
+  color: #ccff00;
+  filter: drop-shadow(0 0 5px rgba(204, 255, 0, 0.4));
+}
+
+.accred-card-title {
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.accred-card-subtag {
+  color: #ccff00;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+.accred-card-desc {
+  color: #8a909e;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bottom Banner */
+.bio-grid-banner {
+  background-color: #12151e;
+  border-radius: 6px;
+  border: 1px solid #1a1f2c;
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio-grid-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.radio-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  background-color: #171c28;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-icon {
+  color: #ccff00;
+}
+
+.bio-grid-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-grid-title {
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.bio-grid-metrics {
+  color: #8a909e;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+.tour-btn {
+  background-color: #ccff00;
+  color: #000000;
+  font-family: var(--font-heading, 'Chakra Petch', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 0.75rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(204, 255, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tour-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(204, 255, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .accred-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bio-grid-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .tour-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .accred-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .accred-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
